@@ -1,16 +1,17 @@
-public class NeonNumber {
+public class NeonNumber{
     public static void main(String[] args) {
-        int num =9;
-        int square = num * num;
-        int digit =0;
+        int number =9;
+        int square =number * number;
+        int sum =0;
+
         while(square>0){
-            digit +=square%10;
-            square = square /10;
+            sum +=square%10;
+            square =square /10;
         }
-        if(digit == num){
-            System.out.println(num+"is a NeonNumber");
+        if(sum == number){
+            System.out.println(number+"is s NeonNumber");
         }else{
-            System.out.println(num+"not a neon number");
+            System.out.println(number+"is not NeonNumber");
         }
     }
 }
