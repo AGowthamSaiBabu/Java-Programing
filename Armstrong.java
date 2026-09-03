@@ -56,9 +56,9 @@ public static boolean isArmstrong(int num){
     public static void main(String[] args) {
         int num =153;
         if(isArmstrong(num)){
-            System.out.println("is Armstron num");
+            System.out.println("is Armstron number");
         }else{
-            System.out.println("is not Armstron num");
+            System.out.println("is not Armstron number");
         }
 
     }
