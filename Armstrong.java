@@ -42,24 +42,44 @@
 
 // 3. Using a method
 
+// public class Armstrong {
+// public static boolean isArmstrong(int num){
+//     int origin =num;
+//     int result =0;
+//     while(num !=0){
+//         int digit =num%10;
+//         result =result+digit*digit*digit;
+//         num =num /10;
+//     }
+//     return origin ==result;
+// }
+//     public static void main(String[] args) {
+//         int num =153;
+//         if(isArmstrong(num)){
+//             System.out.println("is Armstron number");
+//         }else{
+//             System.out.println("is not Armstron number");
+//         }
+
+//     }
+// }
+
+// 4. Using Math.pow()
 public class Armstrong {
-public static boolean isArmstrong(int num){
-    int origin =num;
-    int result =0;
-    while(num !=0){
-        int digit =num%10;
-        result =result+digit*digit*digit;
-        num =num /10;
-    }
-    return origin ==result;
-}
     public static void main(String[] args) {
         int num =153;
-        if(isArmstrong(num)){
-            System.out.println("is Armstron number");
-        }else{
-            System.out.println("is not Armstron number");
+        int origin = num;
+        int result =0;
+        
+        while(num !=0){
+            int digit =num%10;
+            result +=(int)Math.pow(digit,3);
+            num =num / 10;
         }
-
+        if(origin == result){
+            System.out.println("is a Armstrong");
+        }else{
+            System.out.println("is not a Armstrong");
+        }
     }
 }
