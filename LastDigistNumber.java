@@ -1,15 +1,34 @@
+// public class  LastDigistNumber {
+//     public static void main(String[] args) {
+//         int number = 5729;
+//         int lastDigit =0;
+
+//         while(number>0){
+//             int digit =number%10;
+//             if(digit>lastDigit){
+//              lastDigit = digit;
+//             }
+//             number = number / 10;
+//         }
+//         System.out.println(" LastDigistNumber :"+lastDigit);
+//     }
+// }
+
+// Using String
+
 public class  LastDigistNumber {
     public static void main(String[] args) {
         int number = 5729;
-        int lastDigit =0;
+        String str = String.valueOf(number);
+        int LastDigistNumber =0;
 
-        while(number>0){
-            int digit =number%10;
-            if(digit>lastDigit){
-             lastDigit = digit;
+        for(int i =0;i<str.length();i++){
+            int digit =str.charAt(i)-'0';
+
+            if(digit>LastDigistNumber){
+                LastDigistNumber =digit;
             }
-            number = number / 10;
         }
-        System.out.println(" LastDigistNumber :"+lastDigit);
+        System.out.println("LastDigistNumber :"+LastDigistNumber);
     }
 }
